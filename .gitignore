@@ -1,0 +1,22 @@
+/target/
+*/target/**
+.DS_Store
+.settings/org.eclipse.core.resources.prefs
+node_modules/
+package-lock.json
+package.json
+src/test/resources/.DS_Store
+src/test/resources/drivers/.DS_Store
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+.classpath
+.project
+.settings/
