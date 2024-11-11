@@ -24,7 +24,6 @@ public class GlobalPageObjects  {
 	
 	private Page page;
 	//Utilities util = new Utilities(driver);
-	//WaitUtil waitUtil = new WaitUtil(driver);
 
 	public GlobalPageObjects(Page page) {
 		this.page = page;

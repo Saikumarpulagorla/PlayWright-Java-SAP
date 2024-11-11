@@ -8,7 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import com.microsoft.playwright.Locator.WaitForOptions;
+import com.microsoft.playwright.Locator;
+import com.microsoft.playwright.Page;
 import io.cucumber.core.backend.Status;
 import testbase.TestBase;
 
@@ -20,6 +22,7 @@ public class WaitUtil {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
 	
 	public void WaitForExpectedTextToBePresentUpdate(WebElement element, String expectedText, int timeOutInSeconds)
 			throws InterruptedException {

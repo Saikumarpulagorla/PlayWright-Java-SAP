@@ -10,7 +10,6 @@ public class Utilities {
 	public WindowHandlesUtil windowHandlesUtil;
 	public WaitUtil waitUtil;
 	
-	
 	public Utilities(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);

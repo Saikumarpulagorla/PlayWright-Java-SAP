@@ -1,11 +1,10 @@
 package pageObjects;
 
 public class SAP_LoginPage{
- public String Title = "Title=Login - SAP SuccessFactors";
- public static final String Username = "Label=User Name";
- public static final String Password = "Label=Password";
+ public static final String Title = "Title=Login - SAP SuccessFactors";
+ public static final String Username = "LABEL=User Name";
+ public static final String Password = "LABEL=Password";
  public static final String Login = "text=Log in";
- public static final String NewTest = "Text=Log in";
  
  public String Title() {
 		return Title;

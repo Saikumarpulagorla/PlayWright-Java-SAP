@@ -7,10 +7,10 @@ import io.cucumber.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/resources/features",
 	glue={"stepDefinitions"},
-	tags=("@EmployeeOnboarding"),
+	tags=("@SAP_Login"),
 	publish = true,
 	monochrome=true,
-	dryRun = true,
+	dryRun = false,
 	plugin = { "pretty", "html:target/cucumber-pretty-report/PrettyReport.html",
 		"json:target/cucumber.json",
 		"junit:target/Junit-reports/JunitTestReport.xml",

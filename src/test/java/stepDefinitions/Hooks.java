@@ -86,55 +86,60 @@ public class Hooks {
 	@After
 	public void closeBrower(Scenario scenario) throws Exception {
 		
-		//testBase.stopScenarioVideoRecording();
-		if(browser != null) {
-			//testBase.createIssueInJira(scenario);
-			testBase.captureScreenShot(scenario);
-			TestBase.browser.close();
-			TestBase.page.close();
-		}
-		if(mobile != null) {
-			testBase.createIssueInJira(scenario);
-			testBase.captureScreenShot(scenario);
-			//TestBase.driver.quit();
-			if(mobile.equalsIgnoreCase("android")) {
-				//((AppiumDriver)TestBase.driver).quit();
-			} else if (mobile.equalsIgnoreCase("ios")){
-				//TestBase.driver.quit();
-			}
-			
-			
-		}
-		if (database != null) {
-			testBase.closeDBConnection();
-			System.out.println("Data Base Connection Closed...");
-		}
-		if (api != null) {
-			System.out.println("API Connection Closed...");
-		}
-		if(security != null) {
-			try {
-				if(testBase.zapApi != null) {
-					String title = "DragonFlyTest - OG Money ZAP Security Test Report";
-					String template = "traditional-html";
-					String description = "This is DragonFlyTest - OG Money Security Test Report";
-					String reportfilename = "DragonFlyTest_OG_Money_ZAP_Report.html";
-					//String targetfolder = System.getProperty("user.dir")+"/target/";
-					String targetfolder = "/Users/mohan/.jenkins/workspace/07_OG_SECURITY_Automation/";
-					System.out.println("targetfolder="+targetfolder);
-					ApiResponse response = testBase.zapApi.reports.generate(title, template, null, description, null, null, null, null, null, reportfilename, null, targetfolder, null);
-					System.out.println("Zap report generated at this location: "+response.toString());
-				}
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			//testBase.createIssueInJira(scenario);
-			testBase.captureScreenShot(scenario);
-			//TestBase.driver.manage().deleteAllCookies();
-			//TestBase.driver.close();;
-			
-		}
+		testBase.captureScreenShot(scenario);
+		TestBase.browser.close();
+		TestBase.page.close();
+		
+//		//testBase.stopScenarioVideoRecording();
+//		if(browser != null) {
+//			//testBase.createIssueInJira(scenario);
+//			testBase.captureScreenShot(scenario);
+//			TestBase.browser.close();
+//			TestBase.page.close();
+//		}
+//		if(mobile != null) {
+//			testBase.createIssueInJira(scenario);
+//			testBase.captureScreenShot(scenario);
+//			//TestBase.driver.quit();
+//			if(mobile.equalsIgnoreCase("android")) {
+//				//((AppiumDriver)TestBase.driver).quit();
+//			} else if (mobile.equalsIgnoreCase("ios")){
+//				//TestBase.driver.quit();
+//			}
+//			
+//			
+//		}
+//		if (database != null) {
+//			testBase.closeDBConnection();
+//			System.out.println("Data Base Connection Closed...");
+//		}
+//		if (api != null) {
+//			System.out.println("API Connection Closed...");
+//		}
+//		if(security != null) {
+//			try {
+//				if(testBase.zapApi != null) {
+//					String title = "DragonFlyTest - OG Money ZAP Security Test Report";
+//					String template = "traditional-html";
+//					String description = "This is DragonFlyTest - OG Money Security Test Report";
+//					String reportfilename = "DragonFlyTest_OG_Money_ZAP_Report.html";
+//					//String targetfolder = System.getProperty("user.dir")+"/target/";
+//					String targetfolder = "/Users/mohan/.jenkins/workspace/07_OG_SECURITY_Automation/";
+//					System.out.println("targetfolder="+targetfolder);
+//					ApiResponse response = testBase.zapApi.reports.generate(title, template, null, description, null, null, null, null, null, reportfilename, null, targetfolder, null);
+//					System.out.println("Zap report generated at this location: "+response.toString());
+//				}
+//			} catch (Exception e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//			//testBase.createIssueInJira(scenario);
+//			testBase.captureScreenShot(scenario);
+//			//TestBase.driver.manage().deleteAllCookies();
+//			//TestBase.driver.close();;
+//			
+//		}
+//		
 		
 	}
 
