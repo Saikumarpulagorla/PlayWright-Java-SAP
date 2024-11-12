@@ -1,6 +1,6 @@
 package pageObjects;
 
-public class SAP_Homepage  {
+public class Homepage  {
 	
 	public static final String Searchbar = "LABEL=Auto-complete search results";
 	public static final String Manage_Pending_Hires = "TEXT=Manage Pending Hires";

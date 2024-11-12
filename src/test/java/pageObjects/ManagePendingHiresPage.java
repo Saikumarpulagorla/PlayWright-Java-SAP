@@ -1,6 +1,6 @@
 package pageObjects;
 
-public class SAP_ManagePendingHiresPage {
+public class ManagePendingHiresPage {
 
 	public static final String Select_Pending_Hires_Downarrow = "ID=#selectPendingHires-arrow";
 	public static final String Drafts = "ID=#__item0-selectPendingHires-4";

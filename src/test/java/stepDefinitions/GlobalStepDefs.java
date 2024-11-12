@@ -34,7 +34,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.GlobalPageObjects;
-import pageObjects.SAP_Homepage;
+import pageObjects.Homepage;
 import testbase.TestBase;
 import utilities.PlayWrightUtil;
 import utilities.Utilities;
@@ -142,7 +142,7 @@ public class GlobalStepDefs extends TestBase {
 		Class<?> clazz = Class.forName("pageObjects."+className); 
 		Method method = clazz.getMethod(string);
 		Object pageObject = method.invoke(null);
-		//System.out.println("page object"+pageObject.toString());
+		System.out.println("page object"+pageObject.toString());
 		String[] splitText = pageObject.toString().split("=");;
 		String locator = splitText[0];
 		String locatorText = splitText[1];

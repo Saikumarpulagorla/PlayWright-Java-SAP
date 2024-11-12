@@ -1,6 +1,7 @@
 package pageObjects;
 
-public class SAP_AddNewEmployeePage {
+public class AddNewEmployeePage {
+	
 	public static final String Add_New_Employee = "text=Add New Employee";
 	public static final String Salutation_Dropdown = "ID=#__box2-arrow";
 	public static final String Mr_Salutation = "XPATH=(//*[contains(@class,'sapMSLITitleOnly')])[1]";
@@ -22,10 +23,16 @@ public class SAP_AddNewEmployeePage {
 	public static final String Add_Button = "ID=#__button65-BDI-content";
 	public static final String Relation_Name = "ID=#__input85-inner";
 	public static final String Relation_Role_Name = "text=Persson Pia";
-	public static final String Relationship_Type_Downarrow = "ID=#__box57-arrow";
+	public static final String Relationship_Type_Downarrow = "ID=#__box60-arrow";
 	public static final String Apprentice_Supervisor = "text=Apprentice Supervisor";
 	public static final String Continue3 = "ID=#__button63-BDI-content";
-	
+	public static final String Add_Button2 = "ID=#__button76-BDI-content";
+	public static final String Frequency_arrow = "ID=#__box72-arrow";
+	public static final String Frequency_Value = "text=20 days payment (frequency20 days)";
+	public static final String Compensation_Amount = "ID=#__field0-inner";
+	public static final String Compensation_Currency_Arrow = "ID=#__box73-arrow";
+	public static final String Compensation_Currency = "ID=#__item38-titleText";
+	public static final String Add_Button3 = "ID=#__button77-BDI-content";
 	
 	public static String Add_New_Employee() {
 		return Add_New_Employee;
@@ -120,6 +127,34 @@ public class SAP_AddNewEmployeePage {
 	
 	public static String Continue3() {
 		return Continue3;
+	}
+	
+	public static String Add_Button2() {
+		return Add_Button2;
+	}
+	
+	public static String Frequency_arrow() {
+		return Frequency_arrow;
+	}
+	
+	public static String Frequency_Value() {
+		return Frequency_Value;
+	}
+	
+	public static String Compensation_Amount() {
+		return Compensation_Amount;
+	}
+	
+	public static String Compensation_Currency_Arrow() {
+		return Compensation_Currency_Arrow;
+	}
+	
+	public static String Compensation_Currency() {
+		return Compensation_Currency;
+	}
+	
+	public static String Add_Button3() {
+		return Add_Button3;
 	}
 	
 	
