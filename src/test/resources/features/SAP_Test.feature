@@ -1,8 +1,8 @@
 @SAP
 Feature: Test Patient Registration Functionality
  
-	@SAP_Login
-	Scenario: Login Test
+	@SAP_Add_New_Employee
+	Scenario: Add New Employee
 		Given I navigate to web application
 		Then I should see "Page_Title" as "Login - SAP SuccessFactors"
 	 	When I enter "Username" as "blee" in "LoginPage"
@@ -22,6 +22,7 @@ Feature: Test Patient Registration Functionality
 	 	And I click on "AamirKhan" in "ManagePendingHiresPage"
 	 	And I wait for page to load
 	 	Then I should see "Add_New_Employee" in "AddNewEmployeePage"
+#	 	And I wait for 30000 milli Seconds
 	 	And I click on "Salutation_Dropdown" in "AddNewEmployeePage"
 	 	And I wait for 2000 milli Seconds
 	 	And I click on "Mr_Salutation" in "AddNewEmployeePage"
@@ -38,6 +39,8 @@ Feature: Test Patient Registration Functionality
 	 	And I enter "Full_Name" as "MD Aamir Khan" in "AddNewEmployeePage"
 	 	And I enter "Precentage_of_graduation" as "91" in "AddNewEmployeePage"
 	 	And I enter "Phone_number" as "8008789656" in "AddNewEmployeePage"
+	 	And I click on "Accomplishment" in "AddNewEmployeePage"
+	 	And I click on "Accomplishment_Date" in "AddNewEmployeePage"
 	 	And I enter "Email" as "aamirkhan23@gmail.com" in "AddNewEmployeePage"
 	 	And I enter "Phone_Number" as "8008789656" in "AddNewEmployeePage"
 	 	And I click on "Continue2" in "AddNewEmployeePage"
@@ -48,20 +51,28 @@ Feature: Test Patient Registration Functionality
     And I click on "Apprentice_Supervisor" in "AddNewEmployeePage"
     #And I wait for 3000 milli Seconds 	
     And I click on "Continue3" in "AddNewEmployeePage"
+    And I wait for 4000 milli Seconds 	
     And I click on "Add_Button2" in "AddNewEmployeePage"
     And I click on "Frequency_arrow" in "AddNewEmployeePage"
     And I click on "Frequency_Value" in "AddNewEmployeePage"
     And I enter "Compensation_Amount" as "25000" in "AddNewEmployeePage"
     And I click on "Compensation_Currency_Arrow" in "AddNewEmployeePage"
     And I click on "Compensation_Currency" in "AddNewEmployeePage"
-    And I click on "Add_Button3" in "AddNewEmployeePage"
+    Then I click on "Submit_Button" in "AddNewEmployeePage"
 	 	And I wait for 5000 milli Seconds 
 	 	
 #	 	And I enter "Aadhar_Number" as "878767676565" in "AddNewEmployeePage"
 #	 	And I enter "City_of_Hospitals" as "Hyderabad" in "AddNewEmployeePage"
 	 	
 	 	
+	@SAP_Login
+	Scenario: Loging with Invalid password
+		Given I navigate to web application
+		Then I should see "Page_Title" as "Login - SAP SuccessFactors"
+	 	When I enter "Username" as "blee" in "LoginPage"
+	 	And I enter "Password" as "ssSap@0101@" in "LoginPage"
+	 	And I click on "Login" in "LoginPage"	
+	 	And I wait for page to load
+	 	Then I should see "Quick_Actions" in "Homepage"
 	 	
 	 	
-	 	
-	 	 

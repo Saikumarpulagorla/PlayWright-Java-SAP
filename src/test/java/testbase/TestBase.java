@@ -87,8 +87,8 @@ public class TestBase {
 		if (System.getProperty("os.name").toLowerCase().contains(OS.WINDOW.name().toLowerCase())) {
 			if (testApp.equalsIgnoreCase(Browsers.CHROME.name())) {
 				Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-				int width = (int)screenSize.getWidth();
-				int height = (int)screenSize.getHeight();
+				int width = (int)screenSize.getWidth()-100;
+				int height = (int)screenSize.getHeight()-200;
 				
 				Playwright playwright = Playwright.create();
 				browser = playwright.chromium()

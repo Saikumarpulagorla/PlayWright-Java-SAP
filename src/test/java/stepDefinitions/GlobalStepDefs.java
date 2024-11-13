@@ -74,6 +74,14 @@ public class GlobalStepDefs extends TestBase {
 	public void i_see_as(String string, String string2) {
 		PlaywrightAssertions.assertThat(page).hasTitle(string2);
 	}
+	
+	@Then("I should see Submit_Button in {string}")
+	public void i_should_see_submit_button_in(String string) {
+		page.evaluate("window.scrollTo(0, document.body.scrollHeight)");
+//		 boolean isScrollable = page.evaluate("() => document.documentElement.scrollHeight > document.documentElement.clientHeight");
+//         System.out.println("Is page scrollable? " + isScrollable);
+	}
+
 
 	@Then("I should see {string} in {string}")
 	public void i_see_in(String string, String className) throws Exception, SecurityException {
@@ -86,22 +94,46 @@ public class GlobalStepDefs extends TestBase {
 		String locatorText = splitText[1];
 
 		if(locator.equals("text")) {
-			Locator ele = page.locator("text="+locatorText); // Replace with your actual locator
+			Locator ele = page.locator("text="+locatorText);
+			PlaywrightUtil.scrollToElement(ele);
 			PlaywrightAssertions.assertThat(ele).isVisible();
 		} else if (locator.equals("LABEL")) {
 			Locator ele = page.getByLabel(locatorText);
+			PlaywrightUtil.scrollToElement(ele);
 			PlaywrightAssertions.assertThat(ele).isVisible();
 		} else if (locator.equals("ID")) {
 			Locator ele = page.locator(locatorText);
 			System.out.println(ele);
+			PlaywrightUtil.scrollToElement(ele);
 			PlaywrightAssertions.assertThat(ele).isVisible();
 		} else if (locator.equals("XPATH")) {
 			Locator ele = page.locator(locatorText);
+			PlaywrightUtil.scrollToElement(ele);
 			PlaywrightAssertions.assertThat(ele).isVisible();
 		}
 	}
 
-
+	@Then("I move to {string} in {string}")
+	public void i_move_to_in(String string, String className) throws Exception {
+		Class<?> clazz = Class.forName("pageObjects."+className); 
+		Method method = clazz.getMethod(string);
+		Object pageObject = method.invoke(null);
+		//System.out.println("page object"+pageObject.toString());
+		String[] splitText = pageObject.toString().split("=");;
+		String locator = splitText[0];
+		String locatorText = splitText[1];
+		
+		if(locator.equals("LABEL")) {
+			Locator ele = page.getByLabel(locatorText);
+			PlaywrightUtil.moveToElement(ele);
+		} else if(locator.equals("ID")) {
+			Locator ele = page.locator(locatorText);
+			PlaywrightUtil.moveToElement(ele);
+		} else if (locator.equals("XPATH")) {
+			Locator ele = page.locator(locatorText);
+			PlaywrightUtil.moveToElement(ele);
+		}
+	}
 
 
 	public String getXpath(String locatorText)

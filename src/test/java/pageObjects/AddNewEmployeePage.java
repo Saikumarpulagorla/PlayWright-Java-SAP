@@ -20,20 +20,23 @@ public class AddNewEmployeePage {
 	public static final String Email = "XPATH=//*[contains(@value,'ak@gmail.com')]";
 	public static final String Phone_Number = "ID=#__input51-inner";
 	public static final String Continue2 = "XPATH=(//*[contains(text(),'Continue')])[3]";
-	public static final String Add_Button = "ID=#__button65-BDI-content";
+	public static final String Add_Button = "ID=#__button67-BDI-content";
 	public static final String Relation_Name = "ID=#__input85-inner";
 	public static final String Relation_Role_Name = "text=Persson Pia";
-	public static final String Relationship_Type_Downarrow = "ID=#__box60-arrow";
+	public static final String Relationship_Type_Downarrow = "ID=#__box59-arrow";
 	public static final String Apprentice_Supervisor = "text=Apprentice Supervisor";
-	public static final String Continue3 = "ID=#__button63-BDI-content";
-	public static final String Add_Button2 = "ID=#__button76-BDI-content";
-	public static final String Frequency_arrow = "ID=#__box72-arrow";
+	public static final String Continue3 = "ID=#__button65-BDI-content";
+	public static final String Add_Button2 = "XPATH=(//*[contains(text(),'Add')])[20]";
+	public static final String Frequency_arrow = "ID=#__box71-arrow";
 	public static final String Frequency_Value = "text=20 days payment (frequency20 days)";
 	public static final String Compensation_Amount = "ID=#__field0-inner";
-	public static final String Compensation_Currency_Arrow = "ID=#__box73-arrow";
-	public static final String Compensation_Currency = "ID=#__item38-titleText";
+	public static final String Compensation_Currency_Arrow = "ID=#__box72-arrow";
+	public static final String Compensation_Currency = "ID=#__item41-titleText";
 	public static final String Add_Button3 = "ID=#__button77-BDI-content";
-	
+	public static final String Submit_Button = "ID=#__button6-BDI-content";
+	public static final String Accomplishment = "ID=#__picker3-icon";
+	public static final String Accomplishment_Date = "ID=#__picker3-cal--Month0-20241111";
+			
 	public static String Add_New_Employee() {
 		return Add_New_Employee;
 	}
@@ -157,6 +160,17 @@ public class AddNewEmployeePage {
 		return Add_Button3;
 	}
 	
+	public static String Submit_Button() {
+		return Submit_Button;
+	}
+	
+	public static String Accomplishment(){
+		return Accomplishment;
+	}
+    
+	public static String Accomplishment_Date(){
+		return Accomplishment_Date;
+	}
 	
 	
 	

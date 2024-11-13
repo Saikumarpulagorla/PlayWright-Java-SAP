@@ -23,6 +23,6 @@ public class PlayWrightUtil {
 	    }
 	    
 	    public void moveToElement(Locator locator) {
-	        locator.hover(); // Moves to (hovers over) the element
+	        locator.hover(null);; // Moves to (hovers over) the element
 	    }
 }
