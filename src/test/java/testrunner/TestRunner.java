@@ -7,7 +7,7 @@ import io.cucumber.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/resources/features",
 	glue={"stepDefinitions"},
-	tags=("@SAP_Login"),
+	tags=("@SAP_Add_New_Employee"),
 	publish = true,
 	monochrome=true,
 	dryRun = false,
