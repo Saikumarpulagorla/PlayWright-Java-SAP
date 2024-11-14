@@ -1,5 +1,5 @@
 @SAP
-Feature: Test Patient Registration Functionality
+Feature: SAP Application Functionality
  
 	@SAP_Add_New_Employee
 	Scenario: Add New Employee
@@ -22,15 +22,15 @@ Feature: Test Patient Registration Functionality
 	 	And I click on "AamirKhan" in "ManagePendingHiresPage"
 	 	And I wait for page to load
 	 	Then I should see "Add_New_Employee" in "AddNewEmployeePage"
-#	 	And I wait for 30000 milli Seconds
+  	And I wait for 30000 milli Seconds
 	 	And I click on "Salutation_Dropdown" in "AddNewEmployeePage"
 	 	And I wait for 2000 milli Seconds
 	 	And I click on "Mr_Salutation" in "AddNewEmployeePage"
 	 	And I enter "Preferred_Name" as "MD" in "AddNewEmployeePage"
-	 	And I click on "Birth_Country_dropdown" in "AddNewEmployeePage" 
+	 	And I click on "Birth_Country_dropdown" in "AddNewEmployeePage"
 	 	And I click on "India" in "AddNewEmployeePage"
 	 	And I enter "National_ID" as "878767676565" in "AddNewEmployeePage"
-	 	And I wait for 2000 milli Seconds 
+	 	And I wait for 2000 milli Seconds
 	 	And I click on "Continue" in "AddNewEmployeePage"
 	 	And I enter "Country" as "Inida" in "AddNewEmployeePage"
 	 	And I click on "Calender_Icon_of_Certification" in "AddNewEmployeePage"
@@ -46,7 +46,7 @@ Feature: Test Patient Registration Functionality
 	 	And I click on "Continue2" in "AddNewEmployeePage"
 	 	And I click on "Add_Button" in "AddNewEmployeePage"
 	 	And I enter "Relation_Name" as "Pra" in "AddNewEmployeePage"
-    And I click on "Relation_Role_Name" in "AddNewEmployeePage" 
+    And I click on "Relation_Role_Name" in "AddNewEmployeePage"
     And I click on "Relationship_Type_Downarrow" in "AddNewEmployeePage"
     And I click on "Apprentice_Supervisor" in "AddNewEmployeePage"
     #And I wait for 3000 milli Seconds 	

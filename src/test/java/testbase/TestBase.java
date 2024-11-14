@@ -94,8 +94,8 @@ public class TestBase {
 				browser = playwright.chromium()
 						.launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(1));
 				context = browser.newContext(new Browser.NewContextOptions().setViewportSize(width, height));
-				context.setDefaultTimeout(60_000);
-				context.setDefaultNavigationTimeout(60_000);
+				context.setDefaultTimeout(15_000);
+				context.setDefaultNavigationTimeout(15_000);
 				page = context.newPage();
 				
 			} else if (testApp.equalsIgnoreCase(Browsers.HEADLESS.name())) {
