@@ -1,7 +1,7 @@
 @SAP
 Feature: SAP Application Functionality
  
-	@SAP_Add_New_Employee
+	@SAP_test_Sample
 	Scenario: Add New Employee
 		Given I navigate to web application
 		Then I should see "Page_Title" as "Login - SAP SuccessFactors"
@@ -13,8 +13,7 @@ Feature: SAP Application Functionality
 	 	And I enter "Searchbar" as "Manage Pending Hires" in "Homepage"
 	 	And I click on "Manage_Pending_Hires" in "Homepage"
     And I wait for page to load
-    And I wait for 3000 milli Seconds
-	 	Then I should see "Manage_Pending_Hires" in "ManagePendingHiresPage"
+   	 	Then I should see "Manage_Pending_Hires" in "ManagePendingHiresPage"
 	 	And I click on "Select_Pending_Hires_Downarrow" in "ManagePendingHiresPage"
 	 	And I click on "Drafts" in "ManagePendingHiresPage"
 	 	And I wait for page to load

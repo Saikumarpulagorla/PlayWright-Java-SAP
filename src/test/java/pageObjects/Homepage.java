@@ -5,6 +5,7 @@ public class Homepage  {
 	public static final String Searchbar = "LABEL==Auto-complete search results";
 	public static final String Manage_Pending_Hires = "TEXT==Manage Pending Hires";
 	public static final String Quick_Actions = "ID==#QUICK_ACTIONS-sectionLabel";
+	public static final String Quick_Actions_Text = "text==Quick Actions";
 	
 	public static String Quick_Actions() {
 		return Quick_Actions;
@@ -16,6 +17,10 @@ public class Homepage  {
 	
 	public static String Manage_Pending_Hires() {
 		return Manage_Pending_Hires;
+	}
+	
+	public static String Quick_Actions_Text() {
+		return Quick_Actions_Text;
 	}
 
 }
